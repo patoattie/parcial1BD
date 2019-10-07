@@ -13,3 +13,19 @@ FROM investigador i, reserva r
 WHERE i.cod_investigador = r.cod_investigador
 GROUP BY i.apellido, i.nombre
 HAVING COUNT(*) > 1;
+
+/*punto 2*/
+SELECT COUNT(*), i.apellido, i.nombre
+FROM investigador i, reserva r
+WHERE i.cod_investigador = r.cod_investigador
+GROUP BY i.apellido, i.nombre
+HAVING COUNT(*) = 1;
+
+/*punto 3*/
+SELECT COUNT(*), i.apellido, i.nombre
+FROM investigador i, reserva r
+WHERE i.cod_investigador = r.cod_investigador
+GROUP BY i.apellido, i.nombre
+HAVING COUNT(*) > 1;
+
+/*punto 4*/
