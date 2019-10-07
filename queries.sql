@@ -29,3 +29,10 @@ GROUP BY i.apellido, i.nombre
 HAVING COUNT(*) > 1;
 
 /*punto 4*/
+SELECT f.nombre
+FROM facultad f, investigador i
+WHERE f.cod_facultad = i.cod_facultad
+AND i.cod_investigador NOT IN
+(SELECT r.cod_investigador
+ FROM reserva r);
+ 
