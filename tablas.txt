@@ -1,0 +1,17 @@
+facultad (Hay tres, una sin investigador)
+cod_facultad, nombre
+
+investigador (Hay seis, uno sin reserva)
+cod_investigador, nombre, apellido, cod_facultad
+
+reserva (Hay diez reservas)
+cod_reserva, cod_investigador, inicio, fin
+
+equipo (Hay cinco equipos, uno nunca prestado)
+cod_equipo, num_serie, descripcion, cod_facultad
+
+detalle_reserva (Las necesarias)
+cod_reserva, num_serie
+
+---------------------------------------------------------------------------------------------
+1) Mostrar una reserva completa
