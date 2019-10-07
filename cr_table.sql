@@ -24,16 +24,15 @@ CREATE TABLE `parcial1`.`reserva` (
 
 CREATE TABLE `parcial1`.`detalle_reserva` ( 
     `cod_reserva` INT UNSIGNED NOT NULL , 
-    `num_serie` INT UNSIGNED NOT NULL , 
-    UNIQUE `uk_detalle_reserva` (`cod_reserva`, `num_serie`)
+    `nro_serie` INT UNSIGNED NOT NULL , 
+    UNIQUE `uk_detalle_reserva` (`cod_reserva`, `nro_serie`)
     ) ENGINE = InnoDB;
 
 CREATE TABLE `parcial1`.`equipo` ( 
-    `cod_equipo` INT UNSIGNED NOT NULL AUTO_INCREMENT , 
-    `num_serie` INT UNSIGNED NOT NULL , 
+    `nro_serie` INT UNSIGNED NOT NULL , 
     `descripcion` VARCHAR(250) NOT NULL , 
     `cod_facultad` INT UNSIGNED NOT NULL , 
-    PRIMARY KEY (`cod_equipo`), 
+    PRIMARY KEY (`nro_serie`), 
     INDEX `fk_facultad` (`cod_facultad`), 
     UNIQUE `uk_equipo` (`descripcion`)
     ) ENGINE = InnoDB;
